@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>List of Affiliated Schools | SARAS 5.0</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/saras/ui/assets/images/favicon.png" />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/saras/ui/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/saras/ui/assets/css/navbar.css" />
+
+    <link rel="stylesheet" href="/saras/ui/assets/css/custom.css" />
+    <link href="/saras/ui/assets/css/custom-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!--Data Table Files Start-->
+    <link href="/saras/ui/assets/css/datatables.min.css" rel="stylesheet" />    
+    <!--Data Table Files End-->
+
+</head>
+
+<body class="defaultLayoutBg mb__50">
+    <!--Preloader start here-->
+    <div id="pre-load">
+        <div id="loader" class="loader">
+            <div class="loader-container">
+                <div class='loader-icon'>
+                    <img src="/saras/ui/assets/images/favicon.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newHeaderMain">
+        <div class="container customContainer">
+            <div class="newHeaderMainBlk">
+                <img src="/saras/ui/assets/images/cbse-logo.png" alt="cbse" />
+                <div class="newHeaderTitle">
+                    <h1>SARAS 5.0</h1>
+                    <h2>School Affiliation Re-Engineered Automation System</h2>
+                </div>
+                <div class="newHeaderIcon">
+                    <img src="/saras/ui/assets/images/g20-logo.png" alt="g20-logo" />
+                    <img src="/saras/ui/assets/images/digitalcbselogo.png" alt="digitalcbselogo" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main role="main" class="pb-3">
+        
+<div class="statisticsMain">
+
+    <div class="container-fluid">
+        <div class="regForm statisticsBlk affiliatedListMain">
+            <div class="homeBtn">
+                <a class="btn btn-primary actionBtn backLink" href="/saras/Home/Category_Wise">Back to Home</a>
+            </div>
+            <h3 class="pageTitle">CBSE SCHOOLS DIRECTORY</h3>
+            <div class="affiliatedListFilleter">
+<form action="/saras/AffiliatedList/ListOfSchdirReport" autocomplete="off" method="post">                    <h4>Total No. of Schools affiliated with CBSE : <span>29186</span></h4>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <div class="input-group radioGroup form-control inputControl">
+                                    <div>
+                                        <input id="SearchMainRadioKeyword_wise" name="MainRadioValue" type="radio" value="Keyword_wise" />
+                                        <label class="labelControl" for="SearchMainRadioKeyword_wise">Keyword wise</label>
+                                    </div>
+                                    <div>
+                                        <input id="SearchMainRadioAffi_No_wise" name="MainRadioValue" type="radio" value="Affi_No_wise" />
+                                        <label class="labelControl" for="SearchMainRadioAffi_No_wise">Affi. No. wise</label>
+                                    </div>
+                                    <div>
+                                        <input checked="checked" id="SearchMainRadioState_wise" name="MainRadioValue" type="radio" value="State_wise" />
+                                        <label class="labelControl" for="SearchMainRadioState_wise">State wise</label>
+                                    </div>
+                                    <div>
+                                        <input id="SearchMainRadioRegion_wise" name="MainRadioValue" type="radio" value="Region_wise" />
+                                        <label class="labelControl" for="SearchMainRadioRegion_wise">Region wise</label>
+                                    </div>
+                                    <div>
+                                        <input id="SearchMainRadioSchool_level_wise" name="MainRadioValue" type="radio" value="School_level_wise" />
+                                        <label class="labelControl" for="SearchMainRadioSchool_level_wise">School level wise</label>
+                                    </div>
+                                    <div>
+                                        <input id="SearchMainRadioDisaffiliated_schools" name="MainRadioValue" type="radio" value="Disaffiliated_schools" />
+                                        <label class="labelControl" for="SearchMainRadioDisaffiliated_schools">Disaffiliated schools</label>
+                                    </div>
+                            </div>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="MainRadioValue" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div id="div_SearchByStateDist" class="form-group row" style="display:none;">
+                        <div class="col-md-6">
+                            <label class="labelControl">State</label>
+                            <select class="form-select selectControl" data-val="true" data-val-required="Required" id="State" name="State"><option value="">--select--</option>
+<option value="25">ANDAMAN &amp; NICOBAR</option>
+<option value="1">ANDHRA PRADESH</option>
+<option value="22">ARUNACHAL PRADESH</option>
+<option value="2">ASSAM</option>
+<option value="3">BIHAR</option>
+<option value="26">CHANDIGARH</option>
+<option value="33">CHATTISGARH</option>
+<option value="30">DADAR &amp; NAGAR HAVELI</option>
+<option value="31">DAMAN &amp; DIU</option>
+<option value="27">DELHI</option>
+<option value="50">FOREIGN SCHOOLS</option>
+<option selected="selected" value="28">GOA</option>
+<option value="4">GUJARAT</option>
+<option value="5">HARYANA</option>
+<option value="6">HIMACHAL PRADESH</option>
+<option value="7">JAMMU &amp; KASHMIR</option>
+<option value="34">JHARKHAND</option>
+<option value="8">KARNATAKA</option>
+<option value="9">KERALA</option>
+<option value="37">LADAKH</option>
+<option value="32">LAKSHADWEEP</option>
+<option value="10">MADHYA PRADESH</option>
+<option value="11">MAHARASHTRA</option>
+<option value="12">MANIPUR</option>
+<option value="13">MEGHALAYA</option>
+<option value="23">MIZORAM</option>
+<option value="14">NAGALAND</option>
+<option value="15">ODISHA</option>
+<option value="29">PUDUCHERRY</option>
+<option value="16">PUNJAB</option>
+<option value="17">RAJASTHAN</option>
+<option value="18">SIKKIM</option>
+<option value="19">TAMILNADU</option>
+<option value="36">TELANGANA</option>
+<option value="20">TRIPURA</option>
+<option value="21">UTTAR PRADESH</option>
+<option value="35">UTTARAKHAND</option>
+<option value="24">WEST BENGAL</option>
+</select>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="State" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="labelControl">District</label>
+                            <input type="hidden" id="hdnDistrict" value="01" />
+                            <select class="form-select selectControl District" id="District" name="District"></select>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="District" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div id="div_SearchByRegion" class="form-group row" style="display:none;">
+                        <div class="col-md-6">
+                            <label class="labelControl">Region</label>
+                            <select class="input-validation-error form-select selectControl" data-val="true" data-val-required="Required" id="Region" name="Region"><option value="">--select--</option>
+<option value="M">Chennai</option>
+<option value="G">Guwahati</option>
+<option value="A">Ajmer</option>
+<option value="C">chandigarh</option>
+<option value="D">Delhi</option>
+<option value="R">prayagraj</option>
+<option value="P">Patna</option>
+<option value="B">Bhubaneswar</option>
+<option value="T">Trivendram</option>
+<option value="U">Dehradun</option>
+<option value="K">BANGALURU</option>
+<option value="L">Bhopal</option>
+<option value="N">Noida</option>
+<option value="E">PUNE</option>
+<option value="H">PANCHKULA</option>
+<option value="W">DELHI WEST</option>
+<option value="V">Vijaywada</option>
+</select>
+                            <span class="text-danger field-validation-error" data-valmsg-for="Region" data-valmsg-replace="true">Required</span>
+                        </div>
+                    </div>
+                    <div id="div_SearchByKeyword" class="form-group row" style="display:none;">
+                        <div class="col-md-6">
+                            <label class="labelControl">Enter A KeyWord</label>
+                            <input class="form-control inputControl input-validation-error" type="text" data-val="true" data-val-required="Required" id="InstName_orAddress" name="InstName_orAddress" value="" />
+                            <span class="text-danger field-validation-error" data-valmsg-for="InstName_orAddress" data-valmsg-replace="true">Required</span>
+                            <label class="labelControl mt__10">(Keyword is any word from School Name or Address)</label>
+                        </div>
+                    </div>
+                    <div id="div_SearchByAffNo" class="form-group row" style="display:none;">
+                        <div class="col-md-6">
+                            <label class="labelControl">Enter Affiliation No.</label>
+                            <input class="form-control inputControl input-validation-error" type="number" data-val="true" data-val-range="Required" data-val-range-max="2147483647" data-val-range-min="1" data-val-required="The RegiAffNo field is required." id="RegiAffNo" name="RegiAffNo" value="0" />
+                            <span class="text-danger field-validation-error" data-valmsg-for="RegiAffNo" data-valmsg-replace="true">Required</span>
+                        </div>
+                    </div>
+                    <div id="div_SearchByStatusWise" class="form-group row" style="display:none;">
+                        <div class="col-md-6">
+                            <label class="labelControl">Select School Status</label>
+                            <select class="form-select selectControl input-validation-error" data-val="true" data-val-range="Required" data-val-range-max="2147483647" data-val-range-min="1" data-val-required="The SchoolStatusWise field is required." id="SchoolStatusWise" name="SchoolStatusWise">
+                                <option value="0" selected="selected">Select</option>
+                                <option value="1">Middle Class</option>
+                                <option value="2">Secondary Level</option>
+                                <option value="3">Senior Secondary Level</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="div_SearchByDisaff" class="form-group" style="display:none;">
+                        <h4>
+                            Total No Of DisAffiliated Schools : <span>7</span>
+                        </h4>
+                    </div>
+                    <div class="text-center mt__15">
+                        <input type="submit" value="Search" class="btn btn-primary actionBtn" />
+                    </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8AfMjF2bb7BGtLNInEsuqglklsLvtFhx10p5R9MMkb12ekOiOQL8hBhmubyIAKwXtd_SfCDw17O62ksjk5vYw5XhbU-s1w-5HjR6SSFhukpOkxgcvVJNLpL6E_GblpLUF-yJFDODhv0QMY3LM_McqPA" /></form>            </div>
+            <div class="statisticsTable">
+                <div class="table-responsive">
+                    <form method="post">
+                        <table id="myTable" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>S No</th>
+                                    <th>Aff. No</th>
+                                    <th>State & District</th>
+                                    <th>Status</th>
+                                    <th>School & Head Name</th>
+                                    <th> Address,Phone & Email</th>
+                                    <th>Details </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+
+                                        <td>1</td>
+                                        <td>2800002</td>
+                                        <td><b>State : </b>GOA<br /><b>District : </b>GOA NORTH</td>
+
+                                        <td>Senior Secondary Level</td>
+                                        <td><b>Name : </b> PM SHRI KENDRIYA VIDYALAYA <br /> <b>Head/Principal Name: </b>RAVI PRATAP SINGH</td>
+                                        <td>
+                                            <b>Address : </b>INS MANDOVI NAVAL BASE VEREM  GOA GOA<br />
+                                            <b>Phone No : </b>0832, 2402609, <br />
+                                            <b>Email : </b>kvinsmandovi[at]gmail[dot]com<br />
+                                            <b>Website : </b>http://www.prkv1ptblair
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="/saras/AffiliatedList/AfflicationDetails/2800002">View</a>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>2</td>
+                                        <td>2800003</td>
+                                        <td><b>State : </b>GOA<br /><b>District : </b>GOA NORTH</td>
+
+                                        <td>Senior Secondary Level</td>
+                                        <td><b>Name : </b> PM SHRI KENDRIYA VIDYALAYA <br /> <b>Head/Principal Name: </b>BIDHAN CHANDRA SINGH</td>
+                                        <td>
+                                            <b>Address : </b>BAMBOLIM CAMP PANAJI  GOA<br />
+                                            <b>Phone No : </b>0832, 2458783, <br />
+                                            <b>Email : </b>bambolimkv[at]gmail[dot]com<br />
+                                            <b>Website : </b>http://www.kvbambolim.com
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="/saras/AffiliatedList/AfflicationDetails/2800003">View</a>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>3</td>
+                                        <td>2830004</td>
+                                        <td><b>State : </b>GOA<br /><b>District : </b>GOA NORTH</td>
+
+                                        <td>Senior Secondary Level</td>
+                                        <td><b>Name : </b> SUNSHINE WLDWIDE SECONDARY SCHOOL <br /> <b>Head/Principal Name: </b>RAJEEV KUMAR SINGH</td>
+                                        <td>
+                                            <b>Address : </b>20/1-B, BAINGUINIM, OFF NH4A BYPASS KADAMBA ROAD, OLD GOA, TISWADI, GOA(NTH)<br />
+                                            <b>Phone No : </b>0832, 9850323818, <br />
+                                            <b>Email : </b>info[at]sunshineworldwideschool[dot]com<br />
+                                            <b>Website : </b>http://www.sunshineschoolgoa.com
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="/saras/AffiliatedList/AfflicationDetails/2830004">View</a>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>4</td>
+                                        <td>2830005</td>
+                                        <td><b>State : </b>GOA<br /><b>District : </b>GOA NORTH</td>
+
+                                        <td>Secondary Level</td>
+                                        <td><b>Name : </b> GREEN MEADOWS SCHOOL <br /> <b>Head/Principal Name: </b>KIRANJEET SODHI</td>
+                                        <td>
+                                            <b>Address : </b>165/166, ARRIAS VADDO, NAGOA, BARDEZ, GOA<br />
+                                            <b>Phone No : </b>0832, 2278842, <br />
+                                            <b>Email : </b>gmsoffice[at]greenmeadowsschool[dot]in<br />
+                                            <b>Website : </b>http://www.greenmeadowsschool.com/
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="/saras/AffiliatedList/AfflicationDetails/2830005">View</a>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>5</td>
+                                        <td>2830008</td>
+                                        <td><b>State : </b>GOA<br /><b>District : </b>GOA NORTH</td>
+
+                                        <td>Secondary Level</td>
+                                        <td><b>Name : </b> FR. AGNEL CENTRAL SCHOOL <br /> <b>Head/Principal Name: </b>Jacob Shally V</td>
+                                        <td>
+                                            <b>Address : </b>KANTIA BHATT,&#xD;&#xA;PILAR GOA.<br />
+                                            <b>Phone No : </b>, 0832-2217270, <br />
+                                            <b>Email : </b>fragnel[dot]pilar[at]gmail[dot]com<br />
+                                            <b>Website : </b>http://www.fragnelcentralschool.com
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="/saras/AffiliatedList/AfflicationDetails/2830008">View</a>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>6</td>
+                                        <td>2830059</td>
+                                        <td><b>State : </b>GOA<br /><b>District : </b>GOA NORTH</td>
+
+                                        <td>Secondary Level</td>
+                                        <td><b>Name : </b> PODAR INTERNATIONAL SCHOOL <br /> <b>Head/Principal Name: </b>Swati Sohan Patel</td>
+                                        <td>
+                                            <b>Address : </b>PLOT - III, 13/1-C, VILLAGE - BAINGUIUIM, KADAMBA PLATEAU, PANELIUM, TAL - TISWADI, PANJIM, OLD GOA<br />
+                                            <b>Phone No : </b>, 0832-2916072, <br />
+                                            <b>Email : </b>affiliation[dot]goa[at]podar[dot]org<br />
+                                            <b>Website : </b>https://www.podareducation.org/school/panelim
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="/saras/AffiliatedList/AfflicationDetails/2830059">View</a>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>7</td>
+                                        <td>2840002</td>
+                                        <td><b>State : </b>GOA<br /><b>District : </b>GOA NORTH</td>
+
+                                        <td>Senior Secondary Level</td>
+                                        <td><b>Name : </b> JAWAHAR NAVODAYA VIDYALAYA <br /> <b>Head/Principal Name: </b>V  RAMA KRISHNAIAH</td>
+                                        <td>
+                                            <b>Address : </b>VALPOI NORTH GOA GOA<br />
+                                            <b>Phone No : </b>0832, 2374228, <br />
+                                            <b>Email : </b>jnvnorthgoa[at]gmail[dot]com<br />
+                                            <b>Website : </b>
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="/saras/AffiliatedList/AfflicationDetails/2840002">View</a>
+                                        </td>
+
+                                    </tr>
+                            </tbody>
+                        </table>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AfMjF2bb7BGtLNInEsuqglklsLvtFhx10p5R9MMkb12ekOiOQL8hBhmubyIAKwXtd_SfCDw17O62ksjk5vYw5XhbU-s1w-5HjR6SSFhukpOkxgcvVJNLpL6E_GblpLUF-yJFDODhv0QMY3LM_McqPA" /></form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+    </main>
+
+    <!-- jquery-->
+    <script src="/saras/ui/assets/js/jquery.min.js"></script>
+    <script src="/saras/ui/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/saras/ui/assets/js/custom.js"></script>
+    <script src="/saras/ui/assets/js/colorCustom.js"></script>
+
+    <!--Data Table Files Start-->
+    <script src="/saras/ui/assets/js/datatables.min.js"></script>
+    <!--Data Table Files End-->
+
+    
+<script src="/saras/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/saras/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+
+    $("input[name='MainRadioValue']").click(function () {
+        var mainRadioValue = $('input:radio[name=MainRadioValue]:checked').val();
+            //alert($('input:radio[name=MainRadioValue]:checked').val());
+        if (mainRadioValue == "Keyword_wise") {
+            $("#div_SearchByKeyword").show();
+            $("#div_SearchByAffNo").hide();
+            $("#div_SearchByStateDist").hide();
+            $("#div_SearchByStatusWise").hide();
+            $("#div_SearchByDisaff").hide();
+            $("#div_SearchByRegion").hide();
+            }
+            else if (mainRadioValue == "Affi_No_wise") {
+            $("#div_SearchByKeyword").hide();
+            $("#div_SearchByAffNo").show();
+            $("#div_SearchByStateDist").hide();
+            $("#div_SearchByStatusWise").hide();
+            $("#div_SearchByDisaff").hide();
+            $("#div_SearchByRegion").hide();
+            }
+            else if (mainRadioValue == "State_wise") {
+            $("#div_SearchByKeyword").hide();
+            $("#div_SearchByAffNo").hide();
+            $("#div_SearchByStateDist").show();
+            $("#div_SearchByStatusWise").hide();
+            $("#div_SearchByDisaff").hide();
+            $("#div_SearchByRegion").hide();
+            }
+            else if (mainRadioValue == "Region_wise") {
+            $("#div_SearchByKeyword").hide();
+            $("#div_SearchByAffNo").hide();
+            $("#div_SearchByStateDist").hide();
+            $("#div_SearchByStatusWise").hide();
+            $("#div_SearchByDisaff").hide();
+            $("#div_SearchByRegion").show();
+            }
+            else if (mainRadioValue == "School_level_wise") {
+            $("#div_SearchByKeyword").hide();
+            $("#div_SearchByAffNo").hide();
+            $("#div_SearchByStateDist").hide();
+            $("#div_SearchByStatusWise").show();
+            $("#div_SearchByDisaff").hide();
+            $("#div_SearchByRegion").hide();
+            }
+        else if (mainRadioValue == "Disaffiliated_schools") {
+            $("#div_SearchByKeyword").hide();
+            $("#div_SearchByAffNo").hide();
+            $("#div_SearchByStateDist").hide();
+            $("#div_SearchByStatusWise").hide();
+            $("#div_SearchByDisaff").show();
+            $("#div_SearchByRegion").hide();
+            window.location.href = "ListOfSchdirReportNew?ID1=D";
+
+            }
+        });
+
+          $(function () {
+            var dtVal = $("#hdnDistrict").val();
+            if (dtVal != "" && $("#State").val() !="") {
+                 var url = '/saras/PartASec/Dist_Bind';
+                $.getJSON(url, { state_id: $("#State").val() }, function (d) {
+                    var row = "";
+                    $("#District").empty();
+                    $.each(d, function (i, v) {
+                        if (v.value == dtVal) {
+                            row += "<option selected='selected' value=" + v.value + ">" + v.text + "</option>";
+                        }
+                        else {
+                            row += "<option value=" + v.value + ">" + v.text + "</option>";
+                        }
+                    });
+                    $("#District").html(row);
+                });
+            }
+
+
+            $("#State").change(function () {
+                var url = '/saras/PartASec/Dist_Bind';
+                $.getJSON(url, { state_id: $("#State").val() }, function (d) {
+                    var row = "";
+                    $("#District").empty();
+                    $.each(d, function (i, v) {
+                        row += "<option value=" + v.value + ">" + v.text + "</option>";
+                    });
+                    $("#District").html(row);
+                });
+            });
+
+
+
+              var mainRadioValue = $('input:radio[name=MainRadioValue]:checked').val();
+              //alert($('input:radio[name=MainRadioValue]:checked').val());
+              if (mainRadioValue == "Keyword_wise") {
+                  $("#div_SearchByKeyword").show();
+                  $("#div_SearchByAffNo").hide();
+                  $("#div_SearchByStateDist").hide();
+                  $("#div_SearchByStatusWise").hide();
+                  $("#div_SearchByDisaff").hide();
+                  $("#div_SearchByRegion").hide();
+              }
+              else if (mainRadioValue == "Affi_No_wise") {
+                  $("#div_SearchByKeyword").hide();
+                  $("#div_SearchByAffNo").show();
+                  $("#div_SearchByStateDist").hide();
+                  $("#div_SearchByStatusWise").hide();
+                  $("#div_SearchByDisaff").hide();
+                  $("#div_SearchByRegion").hide();
+              }
+              else if (mainRadioValue == "State_wise") {
+                  $("#div_SearchByKeyword").hide();
+                  $("#div_SearchByAffNo").hide();
+                  $("#div_SearchByStateDist").show();
+                  $("#div_SearchByStatusWise").hide();
+                  $("#div_SearchByDisaff").hide();
+                  $("#div_SearchByRegion").hide();
+              }
+              else if (mainRadioValue == "Region_wise") {
+                  $("#div_SearchByKeyword").hide();
+                  $("#div_SearchByAffNo").hide();
+                  $("#div_SearchByStateDist").hide();
+                  $("#div_SearchByStatusWise").hide();
+                  $("#div_SearchByDisaff").hide();
+                  $("#div_SearchByRegion").show();
+              }
+              else if (mainRadioValue == "School_level_wise") {
+                  $("#div_SearchByKeyword").hide();
+                  $("#div_SearchByAffNo").hide();
+                  $("#div_SearchByStateDist").hide();
+                  $("#div_SearchByStatusWise").show();
+                  $("#div_SearchByDisaff").hide();
+                  $("#div_SearchByRegion").hide();
+
+              }
+              else if (mainRadioValue == "Disaffiliated_schools") {
+                  $("#div_SearchByKeyword").hide();
+                  $("#div_SearchByAffNo").hide();
+                  $("#div_SearchByStateDist").hide();
+                  $("#div_SearchByStatusWise").hide();
+                  $("#div_SearchByDisaff").show();
+                  $("#div_SearchByRegion").hide();
+                  window.location.href = "ListOfSchdirReportNew?ID1=D";
+              }
+          });
+
+
+
+    </script>
+
+</body>
+
+
+
+</html>
